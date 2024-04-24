@@ -202,7 +202,7 @@ struct CompilerCommandRunner {
 			// FIXME: if SR-327 ever happens, we should update
 			arguments.append("-emit-bc")
 		case .clang:
-			arguments.append(contentsOf: ["-S", "-Xclang", "-emit-llvm-bc"])
+			arguments.append(contentsOf: ["-Xclang", "-emit-llvm"])
 			if let outputArgument = arguments.firstIndex(of: "-o") {
 				// remove the output location, forces emitting to the current working directory
 				arguments.remove(at: arguments.index(after: outputArgument))
